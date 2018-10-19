@@ -29,7 +29,7 @@ io.on('connection', (socket) => {
     console.log('Connected client on port %s.', PORT);
 
     socket.on('message', (m) => {
-        console.log('[server](message): %s', JSON.stringify(m));
+        console.log('[server](message): %s', m)//JSON.stringify(m));
         io.emit('message', m);
     });
 
