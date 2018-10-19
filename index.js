@@ -34,7 +34,11 @@ io.on('connection', (socket) => {
         io.emit('message', m);
     });
 
-    socket.on('disconnect', () => console.log('Client disconnected...'));
+    socket.on('disconnect', () => {
+        console.log('Client disconnected...')
+        // socket.broadcast.emit('message', { message: 'user disconnected'});
+    })
+        
 })
 
 setInterval(() => io.emit('time', new Date().toTimeString()), 1000);
