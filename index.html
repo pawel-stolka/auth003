@@ -2,7 +2,7 @@
 
 <body>
     <p id='server-time'></p>
-    <p id='server-time2'></p>
+    <!-- <p id='server-time2'></p> -->
     <script src="/socket.io/socket.io.js"></script>
     <script>
         var socket = io();
@@ -10,9 +10,6 @@
         var el2 = document.getElementById('server-time2');
         socket.on('time', function (timeString) {
             el.innerHTML = 'My Server time: ' + timeString;
-        });
-        socket.on('time2', function (timeString) {
-            el2.innerHTML = 'My Server time: ' + timeString;
         });
     </script>
 </body>
