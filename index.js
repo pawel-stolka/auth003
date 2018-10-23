@@ -20,9 +20,11 @@ var socketIo = require('socket.io'),
     //     res.send('hi! everything in Auth4 API3 is working great!')
     // })
 
+// fake
 var server = express()
     .use((req, res) => res.sendFile(INDEX))
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+
 
 let io = socketIo(server)
 io.on('connection', (socket) => {
