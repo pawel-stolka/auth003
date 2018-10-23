@@ -6,7 +6,6 @@ var socketIo = require('socket.io'),
     INDEX = path.join(__dirname, 'index.html')
     // server = require('http'),
 
-
     // app = express();
     // app.use(morgan('dev'))
     // app
